@@ -1,0 +1,270 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-dec {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+}
+
+.font-amiri {
+  font-family: 'Amiri', serif;
+}
+
+.font-aref {
+  font-family: 'Aref Ruqaa', 'Amiri', serif;
+}
+
+.font-gulzar {
+  font-family: 'Gulzar', 'Amiri', serif;
+}
+
+.font-katibeh {
+  font-family: 'Katibeh', 'Amiri', serif;
+}
+
+.font-lateef {
+  font-family: 'Lateef', 'Amiri', serif;
+}
+
+.font-readex {
+  font-family: 'Readex Pro', 'Vazirmatn', sans-serif;
+}
+
+.font-lalezar {
+  font-family: 'Lalezar', cursive, sans-serif;
+}
+
+.font-garamond {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-pinyon {
+  font-family: 'Pinyon Script', cursive, serif;
+}
+
+.font-alex {
+  font-family: 'Alex Brush', cursive, serif;
+}
+
+.font-marcellus {
+  font-family: 'Marcellus', serif;
+}
+
+.font-vazir {
+  font-family: 'Vazirmatn', sans-serif;
+}
+
+.font-time-num {
+  font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "tnum" 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Metallic Gold text & gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #FFF8DB 0%, #F5DE91 25%, #D4AF37 50%, #996F14 75%, #FFF8DB 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shineText 6s ease-in-out infinite;
+}
+
+/* Embossed 3D Gold Stamping effect */
+.embossed-gold-number {
+  text-shadow: 
+    0 1px 0 #FFFDE6,
+    0 -1px 0 #856108,
+    0 2px 4px rgba(0,0,0,0.8),
+    0 0 16px rgba(212,175,55,0.6);
+}
+
+.embossed-gold-name {
+  text-shadow:
+    0 1px 0 #FFF9E0,
+    0 2px 8px rgba(0,0,0,0.9),
+    0 0 18px rgba(212,175,55,0.7);
+}
+
+/* Velvet Card Texture overlay */
+.velvet-texture {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 14px 14px;
+}
+
+/* Holographic foil shimmer wave */
+@keyframes foilSweep {
+  0% { transform: translateX(-150%) rotate(25deg); }
+  35%, 100% { transform: translateX(250%) rotate(25deg); }
+}
+
+.animate-foil-sweep {
+  animation: foilSweep 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Minimalist Specular Light Pass (Subtle ambient sheen across card) */
+@keyframes specularSweep {
+  0% { transform: translateX(-140%) rotate(22deg); }
+  28%, 100% { transform: translateX(240%) rotate(22deg); }
+}
+
+.animate-specular-sweep {
+  animation: specularSweep 10s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.specular-gleam-gradient {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 36%,
+    rgba(255, 255, 255, 0.02) 44%,
+    rgba(255, 248, 220, 0.1) 48%,
+    rgba(253, 240, 166, 0.16) 50%,
+    rgba(212, 175, 55, 0.1) 52%,
+    rgba(255, 255, 255, 0.02) 56%,
+    transparent 64%,
+    transparent 100%
+  );
+}
+
+/* Floor mirror reflection falloff mask */
+.floor-reflection-mask {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.08) 60%, transparent 85%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.08) 60%, transparent 85%);
+}
+
+/* Astral breathing halo */
+@keyframes astralBreathe {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.65; transform: scale(1.08); }
+}
+
+.animate-astral-breathe {
+  animation: astralBreathe 4s ease-in-out infinite;
+}
+
+@keyframes shineText {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #AA771C, #FDF0A6, #D4AF37, #8B6508) 1;
+}
+
+/* Star twinkling animations */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(0.85); }
+  50% { opacity: 1; transform: scale(1.2); filter: drop-shadow(0 0 7px rgba(253, 240, 166, 0.95)); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-7px) rotate(0.8deg); }
+}
+
+@keyframes floatCounter {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(7px) rotate(-0.8deg); }
+}
+
+@keyframes garlandSway {
+  0%, 100% { transform: rotate(-2.5deg); }
+  50% { transform: rotate(2.5deg); }
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translate(0, 0) rotate(-35deg) scaleX(0);
+    opacity: 0;
+  }
+  8% {
+    transform: translate(-40px, 30px) rotate(-35deg) scaleX(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translate(-300px, 220px) rotate(-35deg) scaleX(1.4);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-300px, 220px) rotate(-35deg) scaleX(0);
+    opacity: 0;
+  }
+}
+
+@keyframes candleFlicker {
+  0%, 100% { transform: scale(1) translate(0, 0); opacity: 0.95; }
+  25% { transform: scale(1.04, 0.96) translate(-0.5px, -1px); opacity: 0.85; }
+  50% { transform: scale(0.97, 1.03) translate(0.5px, 0.5px); opacity: 1; }
+  75% { transform: scale(1.02, 0.98) translate(-0.5px, 0.5px); opacity: 0.9; }
+}
+
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-twinkle {
+  animation: twinkle 3.2s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: floatSlow 5.5s ease-in-out infinite;
+}
+
+.animate-float-counter {
+  animation: floatCounter 5.5s ease-in-out infinite;
+}
+
+.animate-garland-sway {
+  animation: garlandSway 4.8s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+.animate-candle-flame {
+  animation: candleFlicker 1.8s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+.animate-shooting-star-1 {
+  animation: shootingStar 9s ease-in-out infinite 1.5s;
+}
+
+.animate-shooting-star-2 {
+  animation: shootingStar 12s ease-in-out infinite 6s;
+}
+
+.gold-shimmer-bg {
+  background: linear-gradient(90deg, rgba(212,175,55,0.05) 0%, rgba(253,240,166,0.2) 50%, rgba(212,175,55,0.05) 100%);
+  background-size: 200% 100%;
+  animation: goldShimmer 4s linear infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(8, 14, 34, 0.7);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.35);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.65);
+}
+

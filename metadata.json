@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix کارت دعوت تولد ماه و خورشید | Celestial Birthday Invitation",
+  "description": "کارت دعوت دیجیتال و لوکس جشن تولد با تم شب پر ستاره، هلال ماه و خورشید طلایی، همراه با پاکت نامه تعاملی، تأیید حضور و یادبود",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
